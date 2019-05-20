@@ -1,4 +1,5 @@
-#encoding: utf-8
+#!/usr/bin/env python3
+#-*- coding:utf-8 -*-
 import requests	#爬虫
 import re	#正则
 import codecs	#字符串编码
