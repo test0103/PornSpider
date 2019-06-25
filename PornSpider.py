@@ -23,7 +23,6 @@ def GetTorrent():
     comment = re.findall(com,result.text)
     aa=0
     for i in range(0,75):
-        print('Just do it!')
         f = open('magnet.txt','a',encoding='utf-8')
         a = comment[i]
         b = torrent[i]
@@ -33,10 +32,13 @@ def GetTorrent():
         f.write('\n')
         f.close()
         if(len(comment[i]) < 70):
+            print('Just do it!')
             dltor = open(str(comment[i])+'.torrent','wb')
             c = 'https://sukebei.nyaa.si'+torrent[i]
             temp=requests.get(c)
             dltor.write(temp.content)
             dltor.close()
             print(c)
+        else : 
+            print('str error')
 GetTorrent()
